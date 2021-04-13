@@ -21,16 +21,12 @@ import kotlin.text.*
 fun countApplesAndOranges(s: Int, t: Int, a: Int, b: Int, apples: Array<Int>, oranges: Array<Int>): Unit {
     var apple_cnt = 0;
     var orange_cnt = 0;
-    for (apple in apples) {
-        if (s <= a + apple && a + apple <= t) {
-            apple_cnt++;
-        }
+    for (apple in apples) if (a + apple in s..t) {
+        apple_cnt++;
     }
 
-    for (orange in oranges) {
-        if (s <= b + orange && b + orange <= t) {
-            orange_cnt++;
-        }
+    for (orange in oranges) if (b + orange in s..t) {
+        orange_cnt++;
     }
 
     println(apple_cnt);
