@@ -1,20 +1,5 @@
-import java.io.*
-import java.math.*
-import java.security.*
-import java.text.*
-import java.util.*
-import java.util.concurrent.*
-import java.util.function.*
-import java.util.regex.*
-import java.util.stream.*
 import kotlin.collections.*
-import kotlin.comparisons.*
 import kotlin.io.*
-import kotlin.jvm.*
-import kotlin.jvm.functions.*
-import kotlin.jvm.internal.*
-import kotlin.ranges.*
-import kotlin.sequences.*
 import kotlin.text.*
 
 /*
@@ -28,9 +13,22 @@ import kotlin.text.*
  */
 
 fun birthday(s: Array<Int>, d: Int, m: Int): Int {
-    for (i in 0..s.size){
-        print(i)
+    var sum = 0
+    var result = 0
+    for (i in s.indices) {
+        if (i < m) {
+            sum += s[i]
+            if (i == m - 1 && sum == d) {
+                result++
+            }
+        } else {
+            sum += s[i] - s[i - m]
+            if (sum == d) {
+                result++
+            }
+        }
     }
+    return result
 }
 
 fun main(args: Array<String>) {
