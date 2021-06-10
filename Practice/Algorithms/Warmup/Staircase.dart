@@ -7,7 +7,7 @@ void main() {
     for (int j = N - i; j >= 1; j--) {
       stdout.write(' ');
     }
-    for(int j=1;j<=i;j++){
+    for (int j = 1; j <= i; j++) {
       stdout.write('#');
     }
     stdout.write('\n');
