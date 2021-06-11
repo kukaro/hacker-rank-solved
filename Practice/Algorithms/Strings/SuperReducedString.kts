@@ -1,13 +1,6 @@
 import kotlin.io.*
 import kotlin.text.*
 
-/*
- * Complete the 'superReducedString' function below.
- *
- * The function is expected to return a STRING.
- * The function accepts STRING s as parameter.
- */
-
 fun superReducedString(s: String): String {
     var pv = 'A'
     var result = s
