@@ -40,7 +40,6 @@ fun weightedUniformStrings(s: String, queries: Array<Int>): ArrayList<String> {
 
 fun main(args: Array<String>) {
     val s = readLine()!!
-
     val queriesCount = readLine()!!.trim().toInt()
 
     val queries = Array<Int>(queriesCount, { 0 })
