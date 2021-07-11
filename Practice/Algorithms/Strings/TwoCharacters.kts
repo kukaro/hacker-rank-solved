@@ -12,11 +12,11 @@ import kotlin.text.*
 fun alternate(s: String): Int {
     var result = 0
     for (a in 'a'..'z') {
-         for (b in a + 1..'z') {
+        for (b in a + 1..'z') {
             var pv = 'A'
             var isSuccess = true
             var num = 0
-             outer@   for (ps in s) {
+            outer@   for (ps in s) {
                 if (ps == a || ps == b) {
 //                    print("$pv:$ps\n")
                     if (pv != ps) {
@@ -28,9 +28,9 @@ fun alternate(s: String): Int {
                     }
                 }
             }
-             if(isSuccess){
-                 result = max(result,num)
-             }
+            if(isSuccess){
+                result = max(result,num)
+            }
         }
     }
     if(result==1){
